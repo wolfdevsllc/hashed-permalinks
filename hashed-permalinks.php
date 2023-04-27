@@ -32,7 +32,6 @@ function hashed_post_name($permalink, $post_id, $leavename) {
 }
 add_filter('post_link', 'hashed_post_name', 10, 3);
 add_filter('post_type_link', 'hashed_post_name', 10, 3);
-add_filter('page_link', 'hashed_post_name', 10, 3); // Apply the function to pages as well
 
 function custom_rewrite_tag() {
     add_rewrite_tag('%posthash%', '([^&]+)');
